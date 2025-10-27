@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free EMI Calculator | Loan EMI, Interest & Total Amount - MultiMitras</title>
+  <meta name="description" content="Use our Free EMI Calculator to calculate your monthly loan installment (EMI) for home, car, or personal loans. Enter loan amount, interest rate, and tenure to get instant results.">
+  <meta name="keywords" content="EMI Calculator, Loan EMI, Interest Calculator, Home Loan, Personal Loan, MultiMitras Tools">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #e9fff2 0%, #c2ffd6 100%);
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      color: #333;
+    }
+
+    header {
+      background: #00b36b;
+      color: white;
+      padding: 30px 15px;
+      border-radius: 0 0 40px 40px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    p.subtitle {
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+
+    .container {
+      background: white;
+      width: 90%;
+      max-width: 400px;
+      margin: 40px auto;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      font-weight: 600;
+      display: block;
+      margin-top: 10px;
+      text-align: left;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #00b36b;
+      border-radius: 10px;
+      font-size: 1rem;
+      margin-top: 5px;
+    }
+
+    button {
+      background: #00b36b;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 15px;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #008f57;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #222;
+    }
+
+    .ad-container {
+      margin: 25px auto;
+      max-width: 400px;
+      background: #fafafa;
+      border: 1px dashed #ccc;
+      padding: 10px;
+      border-radius: 10px;
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 15px;
+      background: #e9f9ef;
+      font-size: 0.9rem;
+    }
+
+    .info {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      text-align: left;
+    }
+
+    .info strong {
+      color: #00b36b;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Free EMI Calculator</h1>
+    <p class="subtitle">Calculate your loan EMI instantly</p>
+  </header>
+
+  <div class="container">
+    <label for="loan">Loan Amount (₹):</label>
+    <input type="number" id="loan" placeholder="e.g. 500000" required>
+
+    <label for="rate">Interest Rate (% per year):</label>
+    <input type="number" id="rate" placeholder="e.g. 10" required>
+
+    <label for="time">Loan Tenure (in years):</label>
+    <input type="number" id="time" placeholder="e.g. 5" required>
+
+    <button onclick="calculateEMI()">Calculate EMI</button>
+    <p class="result" id="result"></p>
+  </div>
+
+  <!-- Ad Placeholder -->
+  <div class="ad-container">
+    [Ad Placeholder: Google AdSense Code Here]
+  </div>
+
+  <section class="info">
+    <h2>About EMI Calculator</h2>
+    <p>
+      The <strong>EMI Calculator</strong> by MultiMitras helps you quickly calculate your monthly installment for any type of loan — home, car, education, or personal. 
+      Simply enter the loan amount, interest rate, and loan tenure to get accurate EMI details.
+    </p>
+    <p>
+      This tool helps you plan your finances better, compare different banks’ interest rates, and choose the most suitable loan option for your needs.
+    </p>
+
+    <p><strong>Formula used:</strong> <br>
+      EMI = [P × R × (1+R)^N] / [(1+R)^N – 1]
+    </p>
+    <p>
+      Where:  
+      P = Loan amount, R = Monthly interest rate, N = Number of months
+    </p>
+  </section>
+
+  <footer>
+    © 2025 MultiMitras | All Rights Reserved
+  </footer>
+
+  <script>
+    function calculateEMI() {
+      const loan = parseFloat(document.getElementById('loan').value);
+      const rate = parseFloat(document.getElementById('rate').value);
+      const time = parseFloat(document.getElementById('time').value);
+
+      if (!loan || !rate || !time) {
+        alert("Please enter all fields correctly!");
+        return;
+      }
+
+      const monthlyRate = rate / 12 / 100;
+      const months = time * 12;
+      const emi = (loan * monthlyRate * Math.pow(1 + monthlyRate, months)) / (Math.pow(1 + monthlyRate, months) - 1);
+      const total = emi * months;
+      const interest = total - loan;
+
+      document.getElementById('result').innerHTML = `
+        💰 <strong>Monthly EMI:</strong> ₹${emi.toFixed(2)}<br>
+        📊 <strong>Total Interest:</strong> ₹${interest.toFixed(2)}<br>
+        🧾 <strong>Total Payment:</strong> ₹${total.toFixed(2)}
+      `;
+    }
+  </script>
+</body>
+</html>
