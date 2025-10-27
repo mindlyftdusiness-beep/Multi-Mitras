@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit Converter | MultiMitras</title>
+  <meta name="description" content="Free online unit converter - convert length, weight, temperature, and more instantly. Fast, accurate and easy to use.">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0072ff, #00c6ff);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+    }
+
+    .converter {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      padding: 30px;
+      border-radius: 20px;
+      width: 400px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    select, input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      margin: 10px 0;
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    .result {
+      background: #fff;
+      color: #000;
+      font-weight: bold;
+      text-align: center;
+      padding: 10px;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
+    .ads {
+      text-align: center;
+      margin-top: 15px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 8px;
+      padding: 8px;
+      font-size: 14px;
+      color: #eee;
+    }
+  </style>
+</head>
+<body>
+  <div class="converter">
+    <h2>Unit Converter</h2>
+    
+    <select id="category" onchange="populateUnits()">
+      <option value="">Select Category</option>
+      <option value="length">Length</option>
+      <option value="weight">Weight</option>
+      <option value="temperature">Temperature</option>
+    </select>
+
+    <input type="number" id="inputValue" placeholder="Enter value" oninput="convert()">
+
+    <select id="fromUnit" onchange="convert()"></select>
+    <select id="toUnit" onchange="convert()"></select>
+
+    <div class="result" id="result">Result will appear here</div>
+
+    <!-- AdSense placeholder -->
+    <div class="ads">
+      [AdSense Ad Here]
+    </div>
+  </div>
+
+  <script>
+    const units = {
+      length: {
+        meter: 1,
+        kilometer: 1000,
+        centimeter: 0.01,
+        millimeter: 0.001,
+        mile: 1609.34,
+        yard: 0.9144,
+        foot: 0.3048,
+        inch: 0.0254
+      },
+      weight: {
+        kilogram: 1,
+        gram: 0.001,
+        milligram: 0.000001,
+        pound: 0.453592,
+        ounce: 0.0283495
+      },
+      temperature: {
+        Celsius: 'C',
+        Fahrenheit: 'F',
+        Kelvin: 'K'
+      }
+    };
+
+    function populateUnits() {
+      const category = document.getElementById('category').value;
+      const fromUnit = document.getElementById('fromUnit');
+      const toUnit = document.getElementById('toUnit');
+      
+      fromUnit.innerHTML = '';
+      toUnit.innerHTML = '';
+      
+      if (category && units[category]) {
+        for (let unit in units[category]) {
+          fromUnit.innerHTML += `<option value="${unit}">${unit}</option>`;
+          toUnit.innerHTML += `<option value="${unit}">${unit}</option>`;
+        }
+      }
+      convert();
+    }
+
+    function convert() {
+      const category = document.getElementById('category').value;
+      const inputValue = parseFloat(document.getElementById('inputValue').value);
+      const fromUnit = document.getElementById('fromUnit').value;
+      const toUnit = document.getElementById('toUnit').value;
+      const resultDiv = document.getElementById('result');
+
+      if (isNaN(inputValue)) {
+        resultDiv.textContent = "Please enter a valid number";
+        return;
+      }
+
+      if (category === 'temperature') {
+        let result = 0;
+        if (fromUnit === 'Celsius' && toUnit === 'Fahrenheit') result = (inputValue * 9/5) + 32;
+        else if (fromUnit === 'Fahrenheit' && toUnit === 'Celsius') result = (inputValue - 32) * 5/9;
+        else if (fromUnit === 'Celsius' && toUnit === 'Kelvin') result = inputValue + 273.15;
+        else if (fromUnit === 'Kelvin' && toUnit === 'Celsius') result = inputValue - 273.15;
+        else if (fromUnit === 'Fahrenheit' && toUnit === 'Kelvin') result = (inputValue - 32) * 5/9 + 273.15;
+        else if (fromUnit === 'Kelvin' && toUnit === 'Fahrenheit') result = (inputValue - 273.15) * 9/5 + 32;
+        else result = inputValue;
+        resultDiv.textContent = `${inputValue} ${fromUnit} = ${result.toFixed(2)} ${toUnit}`;
+        return;
+      }
+
+      if (units[category][fromUnit] && units[category][toUnit]) {
+        const result = inputValue * (units[category][fromUnit] / units[category][toUnit]);
+        resultDiv.textContent = `${inputValue} ${fromUnit} = ${result.toFixed(4)} ${toUnit}`;
+      } else {
+        resultDiv.textContent = "Select valid units";
+      }
+    }
+  </script>
+</body>
+</html>
