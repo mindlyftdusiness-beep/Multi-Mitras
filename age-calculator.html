@@ -1,131 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Free Online Age Calculator | MultiMitras</title>
-  <meta name="description" content="Calculate your exact age in years, months and days using our free online age calculator. Simple, accurate and fast.">
-  <link rel="canonical" href="https://multimitras1.github.io/Multi-Mitras-1/age-calculator.html" />
-  
-  <!-- Open Graph / Social Meta -->
-  <meta property="og:title" content="Free Online Age Calculator | MultiMitras">
-  <meta property="og:description" content="Find your exact age instantly in years, months, and days. Free and fast age calculator tool.">
-  <meta property="og:url" content="https://multimitras1.github.io/Multi-Mitras-1/age-calculator.html">
-  <meta property="og:type" content="website">
-  
-  <link rel="stylesheet" href="style.css" />
-
-  <!-- Google AdSense (replace with your publisher ID) -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-xxxxxxxxxxxx"
-     crossorigin="anonymous"></script>
-  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Online Age Calculator | Calculate Your Age in Seconds - MultiMitras</title>
+  <meta name="description" content="Use our Free Online Age Calculator to find your exact age in years, months, and days. Perfect for forms, job applications, astrology, and birthday tracking.">
+  <meta name="keywords" content="Age Calculator, Free Online Age Calculator, Date of Birth Calculator, Calculate Age, MultiMitras Tools">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-      background: #f4f8fb;
+      background: linear-gradient(180deg, #f7faff 0%, #e6eeff 100%);
       margin: 0;
       padding: 0;
       text-align: center;
-    }
-    header {
-      background: #0078ff;
-      color: white;
-      padding: 20px;
-    }
-    main {
-      margin: 30px auto;
-      max-width: 500px;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-      padding: 25px;
-    }
-    label, input {
-      display: block;
-      margin: 10px auto;
-      font-size: 1rem;
-    }
-    button {
-      background: #0078ff;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: 600;
-    }
-    button:hover {
-      background: #005ec3;
-    }
-    .result {
-      margin-top: 20px;
-      font-weight: 600;
       color: #333;
     }
-    footer {
-      margin-top: 30px;
-      font-size: 0.9rem;
-      color: #777;
+
+    header {
+      background: #007bff;
+      color: white;
+      padding: 30px 15px;
+      border-radius: 0 0 40px 40px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     }
-    .ad-banner {
-      margin: 20px auto;
-      text-align: center;
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    p.subtitle {
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+
+    .container {
+      background: white;
+      width: 90%;
+      max-width: 400px;
+      margin: 40px auto;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #007bff;
+      border-radius: 10px;
+      font-size: 1rem;
+    }
+
+    button {
+      background: #007bff;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 15px;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #222;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 15px;
+      background: #f0f0f0;
+      font-size: 0.9rem;
+    }
+
+    /* Ad section placeholder */
+    .ad-container {
+      margin: 25px auto;
+      max-width: 400px;
+      background: #fafafa;
+      border: 1px dashed #ccc;
+      padding: 10px;
+      border-radius: 10px;
+      color: #666;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
-
   <header>
     <h1>Free Online Age Calculator</h1>
-    <p>Find your exact age in years, months and days</p>
+    <p class="subtitle">Find your exact age in years, months, and days instantly</p>
   </header>
 
-  <!-- Top Banner Ad -->
-  <div class="ad-banner">
-    <ins class="adsbygoogle"
-        style="display:block"
-        data-ad-client="ca-pub-xxxxxxxxxxxx"
-        data-ad-slot="1234567890"
-        data-ad-format="auto"
-        data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-  </div>
-
-  <main>
-    <label for="dob">Enter your Date of Birth:</label>
-    <input type="date" id="dob" />
+  <div class="container">
+    <label for="dob">Enter Your Date of Birth:</label>
+    <input type="date" id="dob" required>
     <button onclick="calculateAge()">Calculate Age</button>
-    <div class="result" id="result"></div>
-  </main>
-
-  <!-- In-Content Ad -->
-  <div class="ad-banner">
-    <ins class="adsbygoogle"
-        style="display:block"
-        data-ad-client="ca-pub-xxxxxxxxxxxx"
-        data-ad-slot="0987654321"
-        data-ad-format="auto"
-        data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    <p class="result" id="result"></p>
   </div>
+
+  <!-- Adsense Ad Placeholder -->
+  <div class="ad-container">
+    [Ad Placeholder: Google AdSense Code Here]
+  </div>
+
+  <section style="max-width:600px;margin:auto;padding:20px;text-align:left;">
+    <h2>About Age Calculator</h2>
+    <p>
+      This free online <strong>Age Calculator</strong> by MultiMitras helps you calculate your exact age in years, months, and days from your date of birth. 
+      You can use it for <strong>government forms, astrology charts, school applications, job profiles, and birthday records</strong>.
+    </p>
+    <p>
+      Our calculator provides accurate results instantly without login or signup. Perfect for everyday use and official purposes.
+    </p>
+  </section>
 
   <footer>
-    <p>&copy; 2025 MultiMitras | All Rights Reserved</p>
+    © 2025 MultiMitras | All Rights Reserved
   </footer>
 
   <script>
     function calculateAge() {
-      const dob = document.getElementById('dob').value;
-      if (!dob) {
-        document.getElementById('result').innerText = "⚠️ Please select your date of birth!";
-        return;
-      }
-      const birthDate = new Date(dob);
+      const dobInput = document.getElementById('dob').value;
+      if (!dobInput) return alert("Please select your date of birth.");
+      const dob = new Date(dobInput);
       const today = new Date();
 
-      let years = today.getFullYear() - birthDate.getFullYear();
-      let months = today.getMonth() - birthDate.getMonth();
-      let days = today.getDate() - birthDate.getDate();
+      let years = today.getFullYear() - dob.getFullYear();
+      let months = today.getMonth() - dob.getMonth();
+      let days = today.getDate() - dob.getDate();
 
       if (days < 0) {
         months--;
@@ -136,13 +156,8 @@
         months += 12;
       }
 
-      document.getElementById('result').innerHTML = `
-        🧭 You are <strong>${years}</strong> years, 
-        <strong>${months}</strong> months and 
-        <strong>${days}</strong> days old.
-      `;
+      document.getElementById('result').innerHTML = `🎂 You are <strong>${years}</strong> years, <strong>${months}</strong> months and <strong>${days}</strong> days old.`;
     }
   </script>
-
 </body>
 </html>
