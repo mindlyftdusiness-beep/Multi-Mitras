@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMR Calculator | MultiMitras</title>
+  <meta name="description" content="Calculate your Basal Metabolic Rate (BMR) instantly using our free BMR Calculator. Find out how many calories your body needs to maintain weight.">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #8E2DE2, #4A00E0);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+    }
+
+    .calculator {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      padding: 30px;
+      border-radius: 20px;
+      width: 400px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: 500;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      margin-bottom: 10px;
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      background: #fff;
+      color: #4A00E0;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #ddd;
+    }
+
+    .result {
+      background: #fff;
+      color: #000;
+      font-weight: bold;
+      text-align: center;
+      padding: 10px;
+      border-radius: 10px;
+      margin-top: 15px;
+    }
+
+    .ads {
+      text-align: center;
+      margin-top: 15px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 8px;
+      padding: 8px;
+      font-size: 14px;
+      color: #eee;
+    }
+
+    @media (max-width: 480px) {
+      .calculator {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <h2>BMR Calculator</h2>
+
+    <label for="gender">Gender:</label>
+    <select id="gender">
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+    </select>
+
+    <label for="age">Age (years):</label>
+    <input type="number" id="age" placeholder="Enter your age">
+
+    <label for="height">Height (cm):</label>
+    <input type="number" id="height" placeholder="Enter your height">
+
+    <label for="weight">Weight (kg):</label>
+    <input type="number" id="weight" placeholder="Enter your weight">
+
+    <button onclick="calculateBMR()">Calculate BMR</button>
+
+    <div class="result" id="result">Your BMR will appear here</div>
+
+    <!-- AdSense Placeholder -->
+    <div class="ads">
+      [AdSense Ad Here]
+    </div>
+  </div>
+
+  <script>
+    function calculateBMR() {
+      const gender = document.getElementById('gender').value;
+      const age = parseFloat(document.getElementById('age').value);
+      const height = parseFloat(document.getElementById('height').value);
+      const weight = parseFloat(document.getElementById('weight').value);
+      const resultDiv = document.getElementById('result');
+
+      if (isNaN(age) || isNaN(height) || isNaN(weight)) {
+        resultDiv.textContent = "Please fill in all fields correctly.";
+        return;
+      }
+
+      let bmr = 0;
+
+      if (gender === "male") {
+        bmr = 88.362 + (13.397 * weight) + (4.799 * height) - (5.677 * age);
+      } else {
+        bmr = 447.593 + (9.247 * weight) + (3.098 * height) - (4.330 * age);
+      }
+
+      resultDiv.textContent = `Your Basal Metabolic Rate (BMR) is ${bmr.toFixed(2)} calories/day.`;
+    }
+  </script>
+</body>
+</html>
