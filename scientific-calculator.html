@@ -1,135 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scientific Calculator | MultiMitras</title>
-  <meta name="description" content="Free online scientific calculator - perform advanced math functions like sin, cos, tan, log, sqrt, power, and more.">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #1e1f29, #2a2b38);
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #fff;
-    }
-    .calculator {
-      width: 380px;
-      background: rgba(0,0,0,0.3);
-      backdrop-filter: blur(10px);
-      padding: 20px;
-      border-radius: 20px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.4);
-    }
-    input {
-      width: 100%;
-      height: 60px;
-      background: #222;
-      color: #0ff;
-      border: none;
-      border-radius: 10px;
-      text-align: right;
-      font-size: 1.8rem;
-      padding-right: 10px;
-      margin-bottom: 15px;
-    }
-    button {
-      width: 70px;
-      height: 60px;
-      margin: 5px;
-      border: none;
-      border-radius: 12px;
-      font-size: 1.1rem;
-      cursor: pointer;
-      color: #fff;
-      background: rgba(255,255,255,0.1);
-      transition: 0.2s;
-    }
-    button:hover {
-      background: #0ff;
-      color: #000;
-    }
-    .equal {
-      background: #0ff;
-      color: #000;
-    }
-    .ads {
-      text-align: center;
-      margin-top: 15px;
-      background: rgba(255,255,255,0.1);
-      border-radius: 8px;
-      padding: 8px;
-      font-size: 14px;
-      color: #aaa;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scientific Calculator | MultiMitras</title>
+<meta name="description" content="Free online scientific calculator with trigonometric, logarithmic, and exponential functions. A modern JavaScript calculator for quick and accurate results.">
+
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1A2980, #26D0CE);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+  }
+
+  .calculator {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    width: 370px;
+    max-width: 90%;
+  }
+
+  #display {
+    width: 100%;
+    height: 60px;
+    text-align: right;
+    font-size: 1.5rem;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background: #fff;
+    color: #000;
+    margin-bottom: 15px;
+  }
+
+  .keys {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+  }
+
+  button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+  }
+
+  button:hover {
+    background: rgba(255,255,255,0.4);
+  }
+
+  .equal {
+    background: #00e676;
+    color: #000;
+  }
+
+  .clear {
+    background: #ff1744;
+  }
+
+  .ads {
+    text-align: center;
+    margin-top: 15px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 14px;
+    color: #eee;
+  }
+</style>
 </head>
 <body>
-  <div class="calculator">
-    <input type="text" id="display" readonly>
-    <div class="buttons">
-      <button onclick="clearDisplay()">C</button>
-      <button onclick="deleteLast()">DEL</button>
-      <button onclick="insert('(')">(</button>
-      <button onclick="insert(')')">)</button><br>
-      <button onclick="insert('7')">7</button>
-      <button onclick="insert('8')">8</button>
-      <button onclick="insert('9')">9</button>
-      <button onclick="insert('/')">÷</button><br>
-      <button onclick="insert('4')">4</button>
-      <button onclick="insert('5')">5</button>
-      <button onclick="insert('6')">6</button>
-      <button onclick="insert('*')">×</button><br>
-      <button onclick="insert('1')">1</button>
-      <button onclick="insert('2')">2</button>
-      <button onclick="insert('3')">3</button>
-      <button onclick="insert('-')">−</button><br>
-      <button onclick="insert('0')">0</button>
-      <button onclick="insert('.')">.</button>
-      <button onclick="calculate()">=</button>
-      <button onclick="insert('+')">+</button><br>
-      <button onclick="insert('Math.sin(')">sin</button>
-      <button onclick="insert('Math.cos(')">cos</button>
-      <button onclick="insert('Math.tan(')">tan</button>
-      <button onclick="insert('Math.sqrt(')">√</button><br>
-      <button onclick="insert('Math.log10(')">log</button>
-      <button onclick="insert('Math.pow(')">xʸ</button>
-      <button onclick="insert('Math.PI')">π</button>
-      <button onclick="insert('Math.E')">e</button>
-    </div>
 
-    <!-- AdSense placeholder -->
-    <div class="ads">
-      [AdSense Ad Here]
-    </div>
+<h2>Scientific Calculator</h2>
+<div class="calculator">
+  <input type="text" id="display" readonly>
+
+  <div class="keys">
+    <button onclick="appendValue('sin(')">sin</button>
+    <button onclick="appendValue('cos(')">cos</button>
+    <button onclick="appendValue('tan(')">tan</button>
+    <button onclick="appendValue('(')">(</button>
+    <button onclick="appendValue(')')">)</button>
+
+    <button onclick="appendValue('^')">xʸ</button>
+    <button onclick="appendValue('sqrt(')">√</button>
+    <button onclick="appendValue('log(')">log</button>
+    <button onclick="appendValue('ln(')">ln</button>
+    <button onclick="appendValue('pi')">π</button>
+
+    <button onclick="appendValue('7')">7</button>
+    <button onclick="appendValue('8')">8</button>
+    <button onclick="appendValue('9')">9</button>
+    <button onclick="appendValue('/')">÷</button>
+    <button onclick="clearDisplay()" class="clear">AC</button>
+
+    <button onclick="appendValue('4')">4</button>
+    <button onclick="appendValue('5')">5</button>
+    <button onclick="appendValue('6')">6</button>
+    <button onclick="appendValue('*')">×</button>
+    <button onclick="deleteLast()">⌫</button>
+
+    <button onclick="appendValue('1')">1</button>
+    <button onclick="appendValue('2')">2</button>
+    <button onclick="appendValue('3')">3</button>
+    <button onclick="appendValue('-')">−</button>
+    <button onclick="appendValue('%')">%</button>
+
+    <button onclick="appendValue('0')">0</button>
+    <button onclick="appendValue('.')">.</button>
+    <button onclick="appendValue('e')">e</button>
+    <button onclick="appendValue('+')">+</button>
+    <button onclick="calculate()" class="equal">=</button>
   </div>
 
-  <script>
-    const display = document.getElementById('display');
+  <div class="ads">[AdSense Ad Here]</div>
+</div>
 
-    function insert(value) {
-      display.value += value;
-    }
+<script>
+  const display = document.getElementById('display');
 
-    function clearDisplay() {
-      display.value = '';
-    }
+  function appendValue(val) {
+    display.value += val;
+  }
 
-    function deleteLast() {
-      display.value = display.value.slice(0, -1);
-    }
+  function clearDisplay() {
+    display.value = '';
+  }
 
-    function calculate() {
-      try {
-        display.value = eval(display.value);
-      } catch {
-        display.value = 'Error';
-      }
+  function deleteLast() {
+    display.value = display.value.slice(0, -1);
+  }
+
+  function calculate() {
+    try {
+      let expr = display.value
+        .replace(/π/g, 'Math.PI')
+        .replace(/e/g, 'Math.E')
+        .replace(/sqrt\(/g, 'Math.sqrt(')
+        .replace(/log\(/g, 'Math.log10(')
+        .replace(/ln\(/g, 'Math.log(')
+        .replace(/sin\(/g, 'Math.sin(')
+        .replace(/cos\(/g, 'Math.cos(')
+        .replace(/tan\(/g, 'Math.tan(')
+        .replace(/\^/g, '**');
+      
+      display.value = eval(expr);
+    } catch (e) {
+      display.value = 'Error';
     }
-  </script>
+  }
+</script>
+
 </body>
 </html>
