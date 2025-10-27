@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI Calculator | Check Your Body Mass Index Instantly - MultiMitras</title>
+  <meta name="description" content="Free BMI Calculator by MultiMitras. Find out your Body Mass Index (BMI) instantly and know whether you are underweight, normal, overweight, or obese.">
+  <meta name="keywords" content="BMI Calculator, Body Mass Index, Health Tool, Fitness Calculator, MultiMitras Tools">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #ffe9e9 0%, #ffc2c2 100%);
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      color: #333;
+    }
+
+    header {
+      background: #ff4d4d;
+      color: white;
+      padding: 30px 15px;
+      border-radius: 0 0 40px 40px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    p.subtitle {
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+
+    .container {
+      background: white;
+      width: 90%;
+      max-width: 400px;
+      margin: 40px auto;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      font-weight: 600;
+      display: block;
+      margin-top: 10px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #ff4d4d;
+      border-radius: 10px;
+      font-size: 1rem;
+    }
+
+    button {
+      background: #ff4d4d;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 15px;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #cc0000;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #222;
+    }
+
+    .ad-container {
+      margin: 25px auto;
+      max-width: 400px;
+      background: #fafafa;
+      border: 1px dashed #ccc;
+      padding: 10px;
+      border-radius: 10px;
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 15px;
+      background: #fff0f0;
+      font-size: 0.9rem;
+    }
+
+    .info {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      text-align: left;
+    }
+
+    .bmi-category {
+      margin-top: 15px;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Free BMI Calculator</h1>
+    <p class="subtitle">Check your Body Mass Index instantly</p>
+  </header>
+
+  <div class="container">
+    <label for="weight">Enter Weight (kg):</label>
+    <input type="number" id="weight" placeholder="e.g. 70" required>
+
+    <label for="height">Enter Height (cm):</label>
+    <input type="number" id="height" placeholder="e.g. 170" required>
+
+    <button onclick="calculateBMI()">Calculate BMI</button>
+    <p class="result" id="result"></p>
+  </div>
+
+  <!-- Ad Placeholder -->
+  <div class="ad-container">
+    [Ad Placeholder: Google AdSense Code Here]
+  </div>
+
+  <section class="info">
+    <h2>About BMI Calculator</h2>
+    <p>
+      The <strong>BMI Calculator</strong> by MultiMitras helps you find your Body Mass Index instantly. BMI is a measure of body fat based on your weight and height. 
+      It helps you understand if you are underweight, healthy, overweight, or obese.
+    </p>
+    <p>
+      This tool is commonly used by <strong>fitness trainers, doctors, and individuals</strong> to track health and fitness goals.
+    </p>
+
+    <div class="bmi-category">
+      <strong>BMI Categories:</strong><br>
+      🔹 Underweight: Less than 18.5<br>
+      🔹 Normal: 18.5 – 24.9<br>
+      🔹 Overweight: 25 – 29.9<br>
+      🔹 Obese: 30 or more
+    </div>
+  </section>
+
+  <footer>
+    © 2025 MultiMitras | All Rights Reserved
+  </footer>
+
+  <script>
+    function calculateBMI() {
+      const weight = document.getElementById('weight').value;
+      const height = document.getElementById('height').value;
+
+      if (!weight || !height) {
+        alert('Please enter both weight and height!');
+        return;
+      }
+
+      const heightInMeters = height / 100;
+      const bmi = (weight / (heightInMeters * heightInMeters)).toFixed(1);
+
+      let category = '';
+      if (bmi < 18.5) category = 'Underweight';
+      else if (bmi < 25) category = 'Normal weight';
+      else if (bmi < 30) category = 'Overweight';
+      else category = 'Obese';
+
+      document.getElementById('result').innerHTML = `💪 Your BMI is <strong>${bmi}</strong> (${category}).`;
+    }
+  </script>
+</body>
+</html>
