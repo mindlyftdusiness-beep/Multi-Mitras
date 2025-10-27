@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Online Age Calculator | MultiMitras</title>
+  <meta name="description" content="Calculate your exact age in years, months and days using our free online age calculator. Simple, accurate and fast.">
+  <link rel="canonical" href="https://multimitras1.github.io/Multi-Mitras-1/age-calculator.html" />
+  
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:title" content="Free Online Age Calculator | MultiMitras">
+  <meta property="og:description" content="Find your exact age instantly in years, months, and days. Free and fast age calculator tool.">
+  <meta property="og:url" content="https://multimitras1.github.io/Multi-Mitras-1/age-calculator.html">
+  <meta property="og:type" content="website">
+  
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google AdSense (replace with your publisher ID) -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-xxxxxxxxxxxx"
+     crossorigin="anonymous"></script>
+  
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f4f8fb;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      background: #0078ff;
+      color: white;
+      padding: 20px;
+    }
+    main {
+      margin: 30px auto;
+      max-width: 500px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      padding: 25px;
+    }
+    label, input {
+      display: block;
+      margin: 10px auto;
+      font-size: 1rem;
+    }
+    button {
+      background: #0078ff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    button:hover {
+      background: #005ec3;
+    }
+    .result {
+      margin-top: 20px;
+      font-weight: 600;
+      color: #333;
+    }
+    footer {
+      margin-top: 30px;
+      font-size: 0.9rem;
+      color: #777;
+    }
+    .ad-banner {
+      margin: 20px auto;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Free Online Age Calculator</h1>
+    <p>Find your exact age in years, months and days</p>
+  </header>
+
+  <!-- Top Banner Ad -->
+  <div class="ad-banner">
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-xxxxxxxxxxxx"
+        data-ad-slot="1234567890"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <main>
+    <label for="dob">Enter your Date of Birth:</label>
+    <input type="date" id="dob" />
+    <button onclick="calculateAge()">Calculate Age</button>
+    <div class="result" id="result"></div>
+  </main>
+
+  <!-- In-Content Ad -->
+  <div class="ad-banner">
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-xxxxxxxxxxxx"
+        data-ad-slot="0987654321"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 MultiMitras | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    function calculateAge() {
+      const dob = document.getElementById('dob').value;
+      if (!dob) {
+        document.getElementById('result').innerText = "⚠️ Please select your date of birth!";
+        return;
+      }
+      const birthDate = new Date(dob);
+      const today = new Date();
+
+      let years = today.getFullYear() - birthDate.getFullYear();
+      let months = today.getMonth() - birthDate.getMonth();
+      let days = today.getDate() - birthDate.getDate();
+
+      if (days < 0) {
+        months--;
+        days += new Date(today.getFullYear(), today.getMonth(), 0).getDate();
+      }
+      if (months < 0) {
+        years--;
+        months += 12;
+      }
+
+      document.getElementById('result').innerHTML = `
+        🧭 You are <strong>${years}</strong> years, 
+        <strong>${months}</strong> months and 
+        <strong>${days}</strong> days old.
+      `;
+    }
+  </script>
+
+</body>
+</html>
