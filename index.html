@@ -1,181 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google AdSense (placed immediately below head as requested) -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2044958846668682"
      crossorigin="anonymous"></script>
+
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-
-  <!-- Primary SEO -->
-  <title>MultiMitras - Free Online Calculators | Basic, Scientific, BMI, EMI & More</title>
-  <meta name="description" content="Free online calculators for basic math, BMI, EMI, age, and scientific calculations. Fast, mobile-friendly and free — no signup required." />
-  <meta name="keywords" content="multi mitra, multimitras, free calculator, online calculator, BMI calculator, age calculator, EMI calculator, scientific calculator, unit converter" />
+  <title>MultiMitras - Free Online Calculators | Age, BMI, EMI, GST & More</title>
+  <meta name="description" content="MultiMitras provides free online calculators and tools — Age, BMI, EMI, Scientific, Unit Converter, BMR, GST, Basic Calculator, CGPA and Percentage calculators. Fast, accurate, and mobile-friendly." />
+  <meta name="keywords" content="free calculator, online calculator, age calculator, bmi calculator, emi calculator, scientific calculator, unit converter, bmr calculator, gst calculator, basic calculator, cgpa calculator, percentage calculator, multimitras" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.multimitras1.space/" />
-  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
 
   <!-- Open Graph -->
-  <meta property="og:type" content="website" />
   <meta property="og:title" content="MultiMitras - Free Online Calculators" />
   <meta property="og:description" content="All-in-one free online calculators — Age, BMI, EMI, Scientific and more." />
+  <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.multimitras1.space/" />
   <meta property="og:image" content="https://www.multimitras1.space/logo.png" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="MultiMitras - Free Online Calculators" />
-  <meta name="twitter:description" content="Fast and free online converters and calculators — trusted by users worldwide." />
+  <meta name="twitter:description" content="Fast and free online calculators — trusted by users worldwide." />
   <meta name="twitter:image" content="https://www.multimitras1.space/logo.png" />
 
-  <!-- Schema (Organization + WebSite) -->
+  <!-- JSON-LD (WebSite + Organization) -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "MultiMitras",
-    "url": "https://www.multimitras1.space/",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://www.multimitras1.space/?s={search_term_string}",
-      "query-input": "required name=search_term_string"
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"MultiMitras",
+    "url":"https://www.multimitras1.space",
+    "potentialAction":{
+      "@type":"SearchAction",
+      "target":"https://www.multimitras1.space/?q={search_term_string}",
+      "query-input":"required name=search_term_string"
     }
   }
   </script>
 
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "MultiMitras",
-    "url": "https://www.multimitras1.space/",
-    "logo": "https://www.multimitras1.space/logo.png",
-    "contactPoint": [{
-      "@type": "ContactPoint",
-      "email": "support@multimitras1.space",
-      "contactType": "customer support",
-      "areaServed": "IN"
-    }]
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"MultiMitras",
+    "url":"https://www.multimitras1.space",
+    "logo":"https://www.multimitras1.space/logo.png",
+    "contactPoint":[{"@type":"ContactPoint","email":"multimitras1@gmail.com","contactType":"customer support","areaServed":"IN"}]
   }
   </script>
-
-  <!-- Google AdSense (replace with your publisher ID) -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-xxxxxxxxxxxx" crossorigin="anonymous"></script>
 
   <!-- Fonts & Icons -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
-  <!-- Styles -->
+  <!-- Inline Styles (single-file) -->
   <style>
     :root{
-      --primary-gradient: linear-gradient(135deg,#00FFFF,#8A2BE2);
+      --primary1:#00d4ff;
+      --primary2:#8a2be2;
+      --gradient: linear-gradient(135deg,var(--primary1),var(--primary2));
       --bg-dark:#0f0f23;
-      --card-dark:rgba(255,255,255,0.05);
+      --card-dark: rgba(255,255,255,0.03);
       --text-light:#ffffff;
-      --text-muted: #b0b0b0;
-      --shadow: 0 8px 32px rgba(0,0,0,0.12);
+      --muted-light:#bfbfbf;
+      --shadow: 0 10px 30px rgba(0,0,0,0.2);
+      --radius: 14px;
       --transition: all .28s ease;
+      --max-width:1200px;
+      --container-padding:20px;
     }
     [data-theme="light"]{
-      --bg-dark:#f8f9fa;
-      --card-dark:rgba(255,255,255,0.9);
-      --text-light:#222;
-      --text-muted:#666;
+      --bg-dark: #f8f9fb;
+      --card-dark: rgba(255,255,255,0.95);
+      --text-light: #0f1724;
+      --muted-light: #666;
     }
-
     *{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
-    body{font-family:'Poppins',sans-serif;background:var(--bg-dark);color:var(--text-light);transition:var(--transition);line-height:1.6;min-height:100vh}
-
-    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+    body{font-family:'Poppins',sans-serif;background:var(--bg-dark);color:var(--text-light);min-height:100vh;line-height:1.6;transition:var(--transition)}
+    a{color:inherit}
+    .container{max-width:var(--max-width);margin:0 auto;padding:0 var(--container-padding)}
 
     /* Header */
-    header{position:fixed;left:0;right:0;top:0;padding:14px 0;background:rgba(10,10,12,0.6);backdrop-filter:blur(8px);z-index:1100;box-shadow:0 4px 20px rgba(0,0,0,0.15)}
-    .header-container{display:flex;align-items:center;justify-content:space-between;gap:12px}
-    .logo{font-family:'Orbitron',sans-serif;font-size:1.7rem;background:var(--primary-gradient);-webkit-background-clip:text;background-clip:text;color:transparent}
-    .nav-links{display:flex;gap:22px;list-style:none;align-items:center}
-    .nav-links a{color:var(--text-light);text-decoration:none;font-weight:500;position:relative;transition:var(--transition)}
-    .nav-links a::after{content:'';position:absolute;left:0;bottom:-6px;height:2px;width:0;background:var(--primary-gradient);transition:var(--transition)}
-    .nav-links a:hover{color:#8A2BE2}
-    .nav-links a:hover::after{width:100%}
-    .header-actions{display:flex;gap:12px;align-items:center}
-    .theme-toggle,.hamburger{background:none;border:0;color:var(--text-light);font-size:1.15rem;padding:8px;border-radius:8px;cursor:pointer}
-    .theme-toggle:hover,.hamburger:hover{background:rgba(255,255,255,0.04)}
+    header{position:fixed;left:0;right:0;top:0;padding:14px 0;background:rgba(10,10,15,0.6);backdrop-filter: blur(6px);z-index:1200;box-shadow:0 4px 24px rgba(0,0,0,0.15)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .logo{font-family:'Orbitron',sans-serif;font-size:1.7rem;background:var(--gradient);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .nav{display:flex;gap:22px;list-style:none;align-items:center}
+    .nav a{color:var(--text-light);text-decoration:none;font-weight:500;position:relative;padding:6px}
+    .nav a::after{content:'';position:absolute;left:0;bottom:-6px;height:2px;width:0;background:var(--gradient);transition:var(--transition)}
+    .nav a:hover::after{width:100%}
+    .actions{display:flex;gap:12px;align-items:center}
+    .btn-icon{background:rgba(255,255,255,0.04);border:0;padding:8px;border-radius:8px;color:var(--text-light);cursor:pointer}
+    .btn-icon:hover{transform:rotate(20deg)}
+    .hamburger{display:none}
 
-    /* Ads top */
-    .ads-top{margin-top:72px; padding:16px;border-radius:12px;background:var(--card-dark);border:1px solid rgba(255,255,255,0.03);display:flex;align-items:center;justify-content:center;color:var(--text-muted)}
+    /* Top ad */
+    .ads-top{margin-top:72px;padding:16px;border-radius:12px;background:var(--card-dark);border:1px solid rgba(255,255,255,0.04);display:flex;align-items:center;justify-content:center;color:var(--muted-light)}
 
     /* Hero */
-    .hero{min-height:72vh;display:flex;align-items:center;justify-content:center;padding-top:40px;position:relative;overflow:hidden}
-    .hero-bg{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,30,0.25),rgba(0,0,0,0.6));z-index:0}
+    .hero{min-height:74vh;display:flex;align-items:center;position:relative;overflow:hidden;padding-top:24px}
+    .hero-bg{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.25),rgba(0,0,0,0.6));z-index:0}
     .particles{position:absolute;inset:0;z-index:0;pointer-events:none}
-    .hero-content{position:relative;z-index:5;text-align:center;max-width:900px;padding:36px 10px}
-    .hero h1{font-size:3rem;line-height:1.05;margin-bottom:14px;background:var(--primary-gradient);-webkit-background-clip:text;background-clip:text;color:transparent}
-    .hero p{font-size:1.05rem;color:var(--text-muted);margin-bottom:20px}
-    .search-container{max-width:640px;margin:0 auto;position:relative}
-    .search-input{width:100%;padding:14px 48px;border-radius:999px;border:none;background:var(--card-dark);color:var(--text-light);font-size:1rem;box-shadow:var(--shadow)}
-    .search-input:focus{outline:none;box-shadow:0 0 0 3px rgba(138,43,226,0.12)}
-    .search-icon{position:absolute;right:18px;top:50%;transform:translateY(-50%);color:var(--text-muted)}
-    .cta-button{display:inline-block;margin-top:18px;padding:12px 28px;border-radius:999px;background:var(--primary-gradient);color:#fff;text-decoration:none;font-weight:600;box-shadow:0 8px 25px rgba(138,43,226,0.18)}
+    .hero-content{position:relative;z-index:5;text-align:center;max-width:900px;margin:0 auto;padding:36px 12px}
+    .hero h1{font-size:3.2rem;line-height:1.02;margin-bottom:12px;background:var(--gradient);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero p{font-size:1.05rem;color:var(--muted-light);margin-bottom:18px}
+    .search-wrap{max-width:680px;margin:0 auto;position:relative}
+    .search{width:100%;padding:14px 48px;border-radius:999px;border:none;background:var(--card-dark);color:var(--text-light);font-size:1rem;box-shadow:var(--shadow)}
+    .search:focus{outline:none;box-shadow:0 0 0 4px rgba(138,43,226,0.08)}
+    .search-icon{position:absolute;right:18px;top:50%;transform:translateY(-50%);color:var(--muted-light);pointer-events:none}
+    .cta{display:inline-block;margin-top:18px;padding:12px 28px;border-radius:999px;background:var(--gradient);color:#fff;text-decoration:none;font-weight:700;box-shadow:0 12px 40px rgba(138,43,226,0.18)}
 
-    /* Tools */
-    .tools-section{padding:80px 0 40px}
-    .section-title{text-align:center;margin-bottom:40px;font-size:2rem;background:var(--primary-gradient);-webkit-background-clip:text;background-clip:text;color:transparent}
-    .tools-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
-    .tool-card{background:var(--card-dark);padding:22px;border-radius:14px;text-align:center;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,0.03);transition:var(--transition);display:flex;flex-direction:column;gap:12px;justify-content:space-between}
-    .tool-icon{font-size:2.6rem;background:var(--primary-gradient);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:6px}
-    .tool-card h3{font-size:1.15rem}
-    .tool-card p{color:var(--text-muted);min-height:54px}
-    .use-tool-btn{display:inline-block;padding:8px 16px;border-radius:999px;background:var(--primary-gradient);color:#fff;text-decoration:none;font-weight:600;box-shadow:0 6px 18px rgba(138,43,226,0.18)}
-    .tool-card:hover{transform:translateY(-8px);box-shadow:0 18px 40px rgba(0,0,0,0.25)}
+    /* Tools grid */
+    .tools-section{padding:80px 0 36px}
+    .section-title{text-align:center;margin-bottom:40px;font-size:2rem;background:var(--gradient);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .tools-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:26px}
+    .card{background:var(--card-dark);padding:22px;border-radius:16px;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,0.03);text-align:center;transition:var(--transition);display:flex;flex-direction:column;gap:12px;justify-content:space-between}
+    .card:hover{transform:translateY(-8px);box-shadow:0 18px 40px rgba(0,0,0,0.25)}
+    .card .icon{font-size:2.6rem;background:var(--gradient);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:6px}
+    .card h3{font-size:1.15rem}
+    .card p{color:var(--muted-light);min-height:52px;margin-bottom:8px}
+    .card .use{display:inline-block;padding:10px 18px;border-radius:999px;background:var(--gradient);color:#fff;text-decoration:none;font-weight:700}
 
     /* Mid Ad */
-    .ads-mid{padding:18px;border-radius:12px;background:var(--card-dark);margin:20px 0;border:1px solid rgba(255,255,255,0.03);display:flex;align-items:center;justify-content:center;color:var(--text-muted)}
+    .ads-mid{padding:18px;border-radius:12px;background:var(--card-dark);margin:24px 0;border:1px solid rgba(255,255,255,0.03);display:flex;align-items:center;justify-content:center;color:var(--muted-light)}
 
     /* Features */
-    .features-section{padding:60px 0}
+    .features{padding:64px 0}
     .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
-    .feature-card{background:var(--card-dark);padding:22px;border-radius:12px;text-align:center;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,0.03)}
-    .feature-icon{font-size:2.2rem;margin-bottom:12px;background:var(--primary-gradient);-webkit-background-clip:text;background-clip:text;color:transparent}
-    .feature-card p{color:var(--text-muted)}
+
+    .feature{background:var(--card-dark);padding:20px;border-radius:12px;text-align:center;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,0.03)}
+    .feature i{font-size:2rem;margin-bottom:10px;background:var(--gradient);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .feature h4{margin-bottom:8px}
+    .feature p{color:var(--muted-light)}
 
     /* About */
-    .about-section{padding:60px 0}
-    .about-content{background:var(--card-dark);padding:28px;border-radius:12px;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,0.03);max-width:900px;margin:0 auto;color:var(--text-muted)}
+    .about{padding:60px 0}
+    .about .box{background:var(--card-dark);padding:26px;border-radius:12px;box-shadow:var(--shadow);color:var(--muted-light)}
 
     /* Footer */
-    footer{background:rgba(10,10,12,0.6);padding:40px 0;margin-top:40px}
-    .footer-content{display:flex;flex-direction:column;align-items:center;gap:14px}
-    .footer-logo{font-family:'Orbitron',sans-serif;font-size:1.6rem;background:var(--primary-gradient);-webkit-background-clip:text;background-clip:text;color:transparent}
-    .footer-links{display:flex;gap:20px;list-style:none;flex-wrap:wrap;justify-content:center}
-    .footer-links a{color:var(--text-muted);text-decoration:none}
-    .copyright{color:var(--text-muted);font-size:.95rem}
+    footer{background:rgba(10,10,12,0.6);padding:40px 0;margin-top:36px}
+    .footer-inner{display:flex;flex-direction:column;align-items:center;gap:12px}
+    .footer-logo{font-family:'Orbitron',sans-serif;font-size:1.6rem;background:var(--gradient);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .footer-links{display:flex;gap:18px;list-style:none;flex-wrap:wrap;justify-content:center}
+    .footer-links a{color:var(--muted-light);text-decoration:none}
+    .copyright{color:var(--muted-light);font-size:.95rem}
 
     /* Responsive */
-    @media(max-width:900px){
-      .hero h1{font-size:2.2rem}
-      header{padding:12px 0}
-    }
-    @media(max-width:640px){
-      .nav-links{display:none;position:absolute;top:64px;left:0;right:0;background:rgba(10,10,20,0.8);flex-direction:column;padding:16px;gap:12px}
-      .nav-links.active{display:flex}
-      .hamburger{display:inline-block}
-      .hero{padding-bottom:40px}
-    }
-
-    /* small particle style for generated elements */
-    .particle{position:absolute;width:6px;height:6px;border-radius:50%;opacity:.7;background:linear-gradient(135deg,#00FFFF,#8A2BE2);filter:blur(0.2px)}
+    @media(max-width:900px){.hero h1{font-size:2.4rem}.card{min-height:190px}}
+    @media(max-width:640px){.nav{display:none}.hamburger{display:inline-block}}
   </style>
 </head>
 <body data-theme="dark">
   <!-- Top Ad (AdSense) -->
   <div class="container" style="margin-top:72px">
-    <div class="ads-top">
+    <div class="ads-top" role="banner" aria-label="Top advertisement">
       <ins class="adsbygoogle"
            style="display:block"
-           data-ad-client="ca-pub-xxxxxxxxxxxx"
+           data-ad-client="ca-pub-2044958846668682"
            data-ad-slot="1111111111"
            data-ad-format="auto"
            data-full-width-responsive="true"></ins>
@@ -185,20 +171,22 @@
 
   <!-- Header -->
   <header>
-    <div class="container header-container">
+    <div class="container header-inner">
       <div class="logo">MultiMitras</div>
 
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#calculators">Calculators</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+      <nav>
+        <ul class="nav">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#calculators">Calculators</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
 
-      <div class="header-actions">
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><i class="fas fa-sun"></i></button>
-        <button class="hamburger" id="hamburger" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+      <div class="actions">
+        <button class="btn-icon" id="themeToggle" aria-label="Toggle theme"><i class="fas fa-sun"></i></button>
+        <button class="btn-icon hamburger" id="hamburger" aria-label="Open menu"><i class="fas fa-bars"></i></button>
       </div>
     </div>
   </header>
@@ -207,18 +195,18 @@
   <main>
     <section class="hero" id="home">
       <div class="hero-bg"></div>
-      <div class="particles" id="particles"></div>
+      <div class="particles" id="particles" aria-hidden="true"></div>
 
-      <div class="container hero-content">
+      <div class="hero-content container">
         <h1>MultiMitras - Free Online Calculators</h1>
-        <p>All-in-one accurate tools for your daily needs — simple, free, and fast!</p>
+        <p>Convert, calculate and simplify daily tasks — fast, accurate, and free. No signup required.</p>
 
-        <div class="search-container" aria-hidden="false">
-          <input id="searchInput" type="search" class="search-input" placeholder="Search calculators (e.g. age, bmi, emi, scientific)..." aria-label="Search calculators">
+        <div class="search-wrap">
+          <input id="searchInput" class="search" type="search" placeholder="Search calculators (age, bmi, emi, scientific, unit, bmr, gst, basic, cgpa, percentage)..." aria-label="Search calculators">
           <i class="fas fa-search search-icon" aria-hidden="true"></i>
         </div>
 
-        <a href="#calculators" class="cta-button">Explore Calculators</a>
+        <a class="cta" href="#calculators">Explore Calculators</a>
       </div>
     </section>
 
@@ -228,123 +216,161 @@
         <h2 class="section-title">Our Calculator Collection</h2>
 
         <div class="tools-grid" id="toolsGrid">
-          <div class="tool-card" data-name="age calculator" role="article" aria-label="Age Calculator">
-            <div class="tool-icon"><i class="fas fa-birthday-cake"></i></div>
+          <!-- Age -->
+          <article class="card tool-card" data-name="age calculator" role="article" aria-label="Age Calculator">
+            <div class="icon"><i class="fas fa-birthday-cake"></i></div>
             <h3>Age Calculator</h3>
-            <p>Calculate your exact age in years, months, and days — useful for forms, astrology, and records.</p>
-            <a class="use-tool-btn" href="age-calculator.html">Use Tool</a>
-          </div>
+            <p>Calculate your exact age in years, months, and days — useful for official forms and records.</p>
+            <a class="use" href="age-calculator.html">Use Tool</a>
+          </article>
 
-          <div class="tool-card" data-name="bmi calculator" role="article" aria-label="BMI Calculator">
-            <div class="tool-icon"><i class="fas fa-weight-scale"></i></div>
+          <!-- BMI -->
+          <article class="card tool-card" data-name="bmi calculator" role="article" aria-label="BMI Calculator">
+            <div class="icon"><i class="fas fa-weight-scale"></i></div>
             <h3>BMI Calculator</h3>
-            <p>Check your Body Mass Index instantly to understand your healthy weight range.</p>
-            <a class="use-tool-btn" href="bmi-calculator.html">Use Tool</a>
-          </div>
+            <p>Check your Body Mass Index and find out your healthy weight range instantly.</p>
+            <a class="use" href="bmi-calculator.html">Use Tool</a>
+          </article>
 
-          <div class="tool-card" data-name="emi calculator" role="article" aria-label="EMI Calculator">
-            <div class="tool-icon"><i class="fas fa-money-bill-wave"></i></div>
+          <!-- EMI -->
+          <article class="card tool-card" data-name="emi calculator" role="article" aria-label="EMI Calculator">
+            <div class="icon"><i class="fas fa-money-bill-wave"></i></div>
             <h3>EMI Calculator</h3>
-            <p>Find monthly installments for loans — plan your finances quickly and accurately.</p>
-            <a class="use-tool-btn" href="emi-calculator.html">Use Tool</a>
-          </div>
+            <p>Calculate monthly EMI, total interest and total payment — plan loans smartly.</p>
+            <a class="use" href="emi-calculator.html">Use Tool</a>
+          </article>
 
-          <!-- Mid Ad -->
-          <div class="ads-mid" aria-hidden="true">
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-xxxxxxxxxxxx"
-                 data-ad-slot="2222222222"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-          </div>
-
-          <div class="tool-card" data-name="scientific calculator" role="article" aria-label="Scientific Calculator">
-            <div class="tool-icon"><i class="fas fa-square-root-alt"></i></div>
+          <!-- Scientific -->
+          <article class="card tool-card" data-name="scientific calculator" role="article" aria-label="Scientific Calculator">
+            <div class="icon"><i class="fas fa-square-root-alt"></i></div>
             <h3>Scientific Calculator</h3>
-            <p>Advanced math functions: trig, log, power, root, factorial, and more — ideal for students.</p>
-            <a class="use-tool-btn" href="scientific-calculator.html">Use Tool</a>
-          </div>
+            <p>Advanced math operations for students and professionals: trig, log, powers and more.</p>
+            <a class="use" href="scientific-calculator.html">Use Tool</a>
+          </article>
 
-          <div class="tool-card" data-name="unit converter" role="article" aria-label="Unit Converter">
-            <div class="tool-icon"><i class="fas fa-ruler-combined"></i></div>
+          <!-- Unit Converter -->
+          <article class="card tool-card" data-name="unit converter" role="article" aria-label="Unit Converter">
+            <div class="icon"><i class="fas fa-ruler-combined"></i></div>
             <h3>Unit Converter</h3>
-            <p>Convert length, weight, temperature and other units in seconds — accurate and easy to use.</p>
-            <a class="use-tool-btn" href="unit-converter.html">Use Tool</a>
-          </div>
+            <p>Convert length, weight, temperature, and other units quickly and accurately.</p>
+            <a class="use" href="unit-converter.html">Use Tool</a>
+          </article>
 
-          <div class="tool-card" data-name="bmr calculator" role="article" aria-label="BMR Calculator">
-            <div class="tool-icon"><i class="fas fa-heartbeat"></i></div>
+          <!-- BMR -->
+          <article class="card tool-card" data-name="bmr calculator" role="article" aria-label="BMR Calculator">
+            <div class="icon"><i class="fas fa-heartbeat"></i></div>
             <h3>BMR Calculator</h3>
-            <p>Calculate basal metabolic rate and daily calorie needs — useful for diet planning.</p>
-            <a class="use-tool-btn" href="bmr-calculator.html">Use Tool</a>
-          </div>
+            <p>Estimate daily calories your body needs at rest for better diet planning.</p>
+            <a class="use" href="bmr-calculator.html">Use Tool</a>
+          </article>
+
+          <!-- GST -->
+          <article class="card tool-card" data-name="gst calculator" role="article" aria-label="GST Calculator">
+            <div class="icon"><i class="fas fa-receipt"></i></div>
+            <h3>GST Calculator</h3>
+            <p>Calculate GST-inclusive and GST-exclusive amounts and percentages quickly.</p>
+            <a class="use" href="gst-calculator.html">Use Tool</a>
+          </article>
+
+          <!-- Basic -->
+          <article class="card tool-card" data-name="basic calculator" role="article" aria-label="Basic Calculator">
+            <div class="icon"><i class="fas fa-calculator"></i></div>
+            <h3>Basic Calculator</h3>
+            <p>Simple and clean basic arithmetic calculator for everyday calculations.</p>
+            <a class="use" href="basic-calculator.html">Use Tool</a>
+          </article>
+
+          <!-- CGPA -->
+          <article class="card tool-card" data-name="cgpa calculator" role="article" aria-label="CGPA Calculator">
+            <div class="icon"><i class="fas fa-graduation-cap"></i></div>
+            <h3>CGPA Calculator</h3>
+            <p>Convert CGPA to percentage or calculate your semester-wise CGPA average.</p>
+            <a class="use" href="cgpa-calculator.html">Use Tool</a>
+          </article>
+
+          <!-- Percentage -->
+          <article class="card tool-card" data-name="percentage calculator" role="article" aria-label="Percentage Calculator">
+            <div class="icon"><i class="fas fa-percentage"></i></div>
+            <h3>Percentage Calculator</h3>
+            <p>Calculate percentages, percentage changes, and ratios quickly and accurately.</p>
+            <a class="use" href="percentage-calculator.html">Use Tool</a>
+          </article>
+        </div>
+
+        <!-- Mid Ad -->
+        <div class="ads-mid" aria-hidden="true" style="margin-top:30px">
+          <ins class="adsbygoogle"
+               style="display:block"
+               data-ad-client="ca-pub-2044958846668682"
+               data-ad-slot="2222222222"
+               data-ad-format="auto"
+               data-full-width-responsive="true"></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
       </div>
     </section>
 
     <!-- Features -->
-    <section class="features-section" id="features">
+    <section class="features" id="features">
       <div class="container">
         <h2 class="section-title">Why People Love MultiMitras</h2>
         <div class="features-grid">
-          <div class="feature-card">
-            <div class="feature-icon"><i class="fas fa-dollar-sign"></i></div>
-            <h3>Totally Free</h3>
-            <p>No hidden fees, subscriptions or paywalls. Use all tools at no cost.</p>
+          <div class="feature">
+            <i class="fas fa-dollar-sign"></i>
+            <h4>Totally Free</h4>
+            <p>No hidden fees, subscriptions, or paywalls. Use all tools freely.</p>
           </div>
 
-          <div class="feature-card">
-            <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
-            <h3>Mobile Friendly</h3>
-            <p>Tools work smoothly across phones, tablets and desktops.</p>
+          <div class="feature">
+            <i class="fas fa-mobile-alt"></i>
+            <h4>Mobile Friendly</h4>
+            <p>Optimized for phones, tablets and desktops with fast performance.</p>
           </div>
 
-          <div class="feature-card">
-            <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
-            <h3>Privacy First</h3>
-            <p>We do not store personal data. Read our <a href="privacy-policy.html" style="color:#bfa6ff">Privacy Policy</a>.</p>
+          <div class="feature">
+            <i class="fas fa-shield-alt"></i>
+            <h4>Privacy First</h4>
+            <p>We don’t store personal data unless you contact us — read our Privacy Policy.</p>
           </div>
 
-          <div class="feature-card">
-            <div class="feature-icon"><i class="fas fa-bolt"></i></div>
-            <h3>Fast Results</h3>
-            <p>Optimized tools for instant calculations — no wait, no delays.</p>
+          <div class="feature">
+            <i class="fas fa-bolt"></i>
+            <h4>Fast Results</h4>
+            <p>Instant calculations with smooth UI for better productivity.</p>
           </div>
 
-          <div class="feature-card">
-            <div class="feature-icon"><i class="fas fa-tools"></i></div>
-            <h3>All in One</h3>
-            <p>No need to open multiple sites. Everything at one place — MultiMitras.</p>
+          <div class="feature">
+            <i class="fas fa-tools"></i>
+            <h4>All in One</h4>
+            <p>Most common calculators and converters consolidated in one site.</p>
           </div>
 
-          <div class="feature-card">
-            <div class="feature-icon"><i class="fas fa-clock"></i></div>
-            <h3>Save Time</h3>
-            <p>Straightforward tools that save you valuable time and effort.</p>
+          <div class="feature">
+            <i class="fas fa-clock"></i>
+            <h4>Save Time</h4>
+            <p>Straightforward tools that help you finish tasks quickly.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- About -->
-    <section class="about-section" id="about">
+    <section class="about" id="about">
       <div class="container">
-        <div class="about-content">
-          <h2>About MultiMitras</h2>
-          <p>MultiMitras provides simple, accurate and free online tools for everyday tasks — from BMI and age calculations to loan EMIs and advanced scientific math. Our mission is to make calculations accessible for everyone, without registration or fees.</p>
-          <p>To help with AdSense approval, this site includes clear information, privacy policy, terms of use, and contact details so users and reviewers can quickly verify site purpose and ownership.</p>
+        <div class="about box">
+          <h3 style="background:var(--gradient);-webkit-background-clip:text;background-clip:text;color:transparent">About MultiMitras</h3>
+          <p>MultiMitras is designed to make everyday calculations simple and reliable. We focus on a small, useful set of calculators that are fast, accurate, and mobile-friendly. Our site includes privacy & legal pages to ensure transparency for users and ad networks.</p>
+          <p>Contact: <a href="mailto:multimitras1@gmail.com">multimitras1@gmail.com</a></p>
         </div>
       </div>
     </section>
 
     <!-- Footer Ad -->
     <div class="container" style="margin-bottom:20px">
-      <div class="ads-footer ads-mid">
+      <div class="ads-mid" aria-hidden="true">
         <ins class="adsbygoogle"
              style="display:block"
-             data-ad-client="ca-pub-xxxxxxxxxxxx"
+             data-ad-client="ca-pub-2044958846668682"
              data-ad-slot="3333333333"
              data-ad-format="auto"
              data-full-width-responsive="true"></ins>
@@ -355,130 +381,106 @@
 
   <!-- Footer -->
   <footer id="contact">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-logo">MultiMitras</div>
-        <ul class="footer-links">
-          <li><a href="privacy-policy.html">Privacy Policy</a></li>
-          <li><a href="terms.html">Terms of Use</a></li>
-          <li><a href="disclaimer.html">Disclaimer</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="sitemap.html">Sitemap</a></li>
-        </ul>
-        <div style="color:var(--text-muted)">Contact: <a href="mailto:multimitras@gmail.com" style="color:#bfa6ff">multimitras@gmail.com</a></div>
-        <div class="copyright">© 2025 MultiMitras | Designed for simplicity and accuracy.</div>
-      </div>
+    <div class="container footer-inner">
+      <div class="footer-logo">MultiMitras</div>
+      <ul class="footer-links">
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="sitemap.html">Sitemap</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="copyright">© 2025 MultiMitras • Contact: <a href="mailto:multimitras1@gmail.com">multimitras1@gmail.com</a></div>
     </div>
   </footer>
 
   <!-- Scripts -->
   <script>
-    /* ---------------------------
-       Theme Toggle (persist)
-       --------------------------- */
+    // Theme toggle (persist)
     (function(){
       const body = document.body;
-      const themeToggle = document.getElementById('themeToggle');
-      const icon = themeToggle.querySelector('i');
+      const toggle = document.getElementById('themeToggle');
+      const icon = toggle.querySelector('i');
       const saved = localStorage.getItem('theme') || 'dark';
       body.setAttribute('data-theme', saved);
       icon.className = saved === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
-
-      themeToggle.addEventListener('click', () => {
-        const current = body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-        body.setAttribute('data-theme', current);
-        localStorage.setItem('theme', current);
-        icon.className = current === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+      toggle.addEventListener('click', () => {
+        const next = body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        body.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+        icon.className = next === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
       });
     })();
 
-    /* ---------------------------
-       Mobile Menu Toggle
-       --------------------------- */
+    // Mobile menu
     (function(){
       const hamburger = document.getElementById('hamburger');
-      const navLinks = document.querySelector('.nav-links');
-      hamburger.addEventListener('click', () => navLinks.classList.toggle('active'));
+      const nav = document.querySelector('.nav');
+      if(hamburger){
+        hamburger.addEventListener('click', () => nav.classList.toggle('active'));
+      }
     })();
 
-    /* ---------------------------
-       Search / Filter Tools
-       --------------------------- */
+    // Search filter
     (function(){
       const input = document.getElementById('searchInput');
       const cards = document.querySelectorAll('.tool-card');
+      if(!input) return;
       input.addEventListener('input', () => {
         const q = input.value.toLowerCase().trim();
-        cards.forEach(card => {
-          const name = card.getAttribute('data-name') || '';
-          if (!q || name.includes(q)) card.style.display = 'flex';
-          else card.style.display = 'none';
+        cards.forEach(c => {
+          const name = (c.getAttribute('data-name') || '').toLowerCase();
+          if (!q || name.includes(q)) c.style.display = 'flex';
+          else c.style.display = 'none';
         });
       });
     })();
 
-    /* ---------------------------
-       Particles (simple, performant)
-       --------------------------- */
+    // Particles
     (function(){
       const container = document.getElementById('particles');
+      if(!container) return;
       const count = Math.min(Math.floor(window.innerWidth / 20), 60);
       for(let i=0;i<count;i++){
         const p = document.createElement('div');
         p.className = 'particle';
-        const size = 2 + Math.random()*6;
-        p.style.width = p.style.height = size+'px';
+        const size = 1 + Math.random()*6;
+        p.style.width = p.style.height = size + 'px';
         p.style.left = Math.random()*100 + '%';
         p.style.top = Math.random()*100 + '%';
-        p.style.opacity = 0.35 + Math.random()*0.7;
+        p.style.opacity = 0.2 + Math.random()*0.8;
         p.style.transform = 'translate3d(0,0,0)';
-        p.style.animation = `float ${10+Math.random()*20}s linear ${Math.random()*5}s infinite`;
+        p.style.animation = `float ${10 + Math.random()*20}s linear ${Math.random()*5}s infinite`;
         container.appendChild(p);
       }
-      // add keyframes dynamically for minimal CSS overhead
       const style = document.createElement('style');
-      style.innerHTML = `
-        @keyframes float {
-          0% { transform: translateY(0) translateX(0); }
-          25% { transform: translateY(-12px) translateX(8px); }
-          50% { transform: translateY(-24px) translateX(0); }
-          75% { transform: translateY(-12px) translateX(-8px); }
-          100% { transform: translateY(0) translateX(0); }
-        }`;
+      style.innerHTML = `@keyframes float {0%{transform:translateY(0) translateX(0)}25%{transform:translateY(-12px) translateX(8px)}50%{transform:translateY(-24px) translateX(0)}75%{transform:translateY(-12px) translateX(-8px)}100%{transform:translateY(0) translateX(0)}} .particle{position:absolute;border-radius:50%;background:linear-gradient(135deg,var(--primary1),var(--primary2));filter:blur(.2px)}`;
       document.head.appendChild(style);
     })();
 
-    /* ---------------------------
-       Intersection Observer for card animation
-       --------------------------- */
+    // Intersection animation for cards/features
     (function(){
-      const cards = document.querySelectorAll('.tool-card, .feature-card');
-      const obs = new IntersectionObserver((entries, ob) => {
-        entries.forEach(entry => {
-          if(entry.isIntersecting){
-            entry.target.style.opacity = 1;
-            entry.target.style.transform = 'translateY(0)';
-            ob.unobserve(entry.target);
+      const items = document.querySelectorAll('.card, .feature');
+      const obs = new IntersectionObserver((entries, o) => {
+        entries.forEach(en => {
+          if(en.isIntersecting){
+            en.target.style.opacity = 1;
+            en.target.style.transform = 'translateY(0)';
+            o.unobserve(en.target);
           }
         });
-      }, {threshold:0.12});
-      cards.forEach(c => {
-        c.style.opacity = 0;
-        c.style.transform = 'translateY(20px)';
-        obs.observe(c);
+      }, {threshold: 0.12});
+      items.forEach(i => {
+        i.style.opacity = 0;
+        i.style.transform = 'translateY(22px)';
+        obs.observe(i);
       });
     })();
   </script>
 
-  <!-- Optional: Google Analytics placeholder (replace with your GA4 tag) -->
-  <!--
+  <!-- Optional GA placeholder:
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments)}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
   -->
 
 </body>
